@@ -1,0 +1,315 @@
+.footer {
+  position: relative;
+  flex: 0 0 auto;
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__top {
+    position: relative;
+    max-width: 1200px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 90px;
+    padding-bottom: 80px;
+    @include response(1200px) {
+      padding: 60px 20px 40px;
+    }
+  }
+  &__info {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 102px;
+    @include response(1200px) {
+      display: block;
+      margin-bottom: 40px;
+    }
+  }
+  &__logo {
+    position: relative;
+    flex: 0 0 auto;
+    margin-right: 24px;
+    @include response(1200px) {
+      margin-bottom: 20px;
+      margin-right: 0;
+      text-align: center;
+    }
+  }
+  &__logo-link {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  &__info-text {
+    position: relative;
+    padding-left: 24px;
+    border-left: 1px solid rgba(219, 219, 219, 0.2);
+    max-width: 483px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 22px;
+    @include response(1200px) {
+      border-left: 0;
+      padding-left: 0;
+      max-width: 100%;
+      text-align: center;
+      font-weight: 400;
+      line-height: 20px;
+      letter-spacing: -0.123px;
+    }
+  }
+  &__row {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    @include response(1200px) {
+      flex-wrap: wrap;
+    }
+  }
+  &__cell {
+    position: relative;
+    flex: 0 0 auto;
+    padding-left: 100px;
+    padding-right: 100px;
+    border-right: 1px solid rgba(#dbdbdb, 0.2);
+    @include response(1200px) {
+      padding-left: 0;
+      padding-right: 0;
+      border-right: 0;
+      &:nth-child(1),
+      &:nth-child(2) {
+        width: 50%;
+      }
+    }
+    &:first-child {
+      padding-left: 0;
+    }
+    &:last-child {
+      padding-right: 0;
+      border-right: 0;
+      flex: 1 1 auto;
+      @include response(1200px) {
+        width: 100%;
+        padding-top: 40px;
+        margin-top: 40px;
+        border-top: 1px solid rgba(#dbdbdb, 0.2);
+      }
+    }
+  }
+  &__cell-title {
+    position: relative;
+    margin-bottom: 36px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #fff;
+    @include response(1200px) {
+      font-size: 16px;
+      letter-spacing: -0.461px;
+      margin-bottom: 20px;
+    }
+  }
+  &__nav {
+    position: relative;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-width: 182px;
+    li {
+      position: relative;
+      margin-bottom: 16px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    a {
+      display: inline-block;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 20px;
+      color: #fff;
+      @include response(1200px) {
+        font-size: 14px;
+        letter-spacing: -0.123px;
+      }
+      @include desktop-hover() {
+        text-decoration: underline;
+      }
+    }
+  }
+  &__sing-up-title {
+    position: relative;
+    margin-bottom: 16px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    margin-bottom: 16px;
+    color: #fff;
+    @include response(1200px) {
+      font-size: 16px;
+      letter-spacing: -0.461px;
+      margin-bottom: 12px;
+    }
+  }
+  &__sing-up-text {
+    position: relative;
+    color: #fff;
+    margin-bottom: 36px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    @include response(1200px) {
+      font-size: 14px;
+      letter-spacing: -0.123px;
+      margin-bottom: 20px;
+    }
+  }
+  &__sing-up-form {
+    position: relative;
+  }
+  &__sing-up-row {
+    position: relative;
+    margin-bottom: 16px;
+    input {
+      font-family: "Raleway", sans-serif;
+      width: 100%;
+      background: #253a64;
+      height: 60px;
+      font-size: 16px;
+      font-weight: 400;
+      color: #fff;
+      border: 1px solid transparent;
+      padding: 0 16px;
+      transition: 0.3s ease-in-out;
+      @include response(1200px) {
+        height: 44px;
+      }
+      @include desktop-hover() {
+        border-color: #fff;
+      }
+      &:focus {
+        border-color: #fff;
+      }
+      &::placeholder {
+        color: #a7a7a7;
+      }
+    }
+  }
+  &__sing-up-btn {
+    font-family: "Raleway", sans-serif;
+    position: relative;
+    width: 100%;
+    border: 0;
+    background: #b51119;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fcfcfc;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: -0.141px;
+    padding: 20px;
+    border-radius: 4px;
+    transition: 0.3s ease-in-out;
+    @include response(1200px) {
+      padding-top: 18px;
+      padding-bottom: 18px;
+    }
+    @include desktop-hover() {
+      background: #fff;
+      color: #000;
+      svg {
+        fill: #000;
+      }
+    }
+    svg {
+      fill: #fff;
+      flex: 0 0 auto;
+      margin-right: 8px;
+      transition: 0.3s ease-in-out;
+    }
+  }
+  &__bottom {
+    position: relative;
+    background: #fff;
+    padding-top: 36px;
+    padding-bottom: 20px;
+    @include response(1200px) {
+      padding: 20px;
+    }
+  }
+  &__bottom-container {
+    position: relative;
+    max-width: 1400px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &__bottom-header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #dbdbdb;
+    @include response(1200px) {
+      padding-bottom: 20px;
+    }
+  }
+  &__bottom-footer {
+    padding-top: 24px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include response(1200px) {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+  }
+  &__copy {
+    position: relative;
+    color: #000;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: -0.123px;
+    @include response(1200px) {
+      margin-top: 8px;
+      text-align: center;
+    }
+  }
+}
+.imgs {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  &--menu {
+    margin-bottom: 22px;
+  }
+  &__item {
+    position: relative;
+    margin-right: 50px;
+    @include response(1200px) {
+      margin-right: 12px;
+      flex: 0 1 auto;
+    }
+    .imgs--menu & {
+      margin-right: 12px;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

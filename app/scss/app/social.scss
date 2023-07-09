@@ -1,0 +1,39 @@
+.social {
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  &--menu {
+    justify-content: center;
+    margin-bottom: 8px;
+  }
+  li {
+    position: relative;
+    flex: 0 0 auto;
+    margin-right: 8px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid rgba(#0a142f, 0.25);
+    width: 40px;
+    height: 40px;
+    transition: 0.3s ease-in-out;
+    @include desktop-hover() {
+      background: #0a142f;
+      svg {
+        fill: #fff;
+      }
+    }
+    svg {
+      fill: #0a142f;
+      transition: 0.3s ease-in-out;
+    }
+  }
+}

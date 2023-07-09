@@ -13,6 +13,12 @@ document.addEventListener('DOMContentLoaded', () => {
   custom()
 })
 
-// $(window).on('load resize', () => {
-//   if ($(window).width() < 1200) {} 
-// })
+$(window).on('load resize', () => {
+  if ($(window).width() < 1200) {
+    $('.header__mobile-header').append($('.header__btn'))
+    $('.header__mobile-header').append($('.header__subscribe'))
+  } else {
+    $('.header__subscribe').insertBefore($('.header__search-btn'))
+    $('.header__btn').insertBefore($('.header__subscribe'))
+  }
+})

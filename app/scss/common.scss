@@ -1,12 +1,41 @@
 body {
   height: 100%;
-  font-family: sans-serif;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  line-height: 1;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: none;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   @include response(1200px) {
     ::-webkit-scrollbar {
       display: none;
     }
+  }
+}
+
+.wrapper {
+  position: relative;
+  max-width: 100%;
+  width: 100%;
+  overflow: hidden;
+  flex: 1 1 auto;
+  padding-top: 95px;
+  @include response(1200px) {
+    padding-top: 91px;
+  }
+}
+
+.container {
+  position: relative;
+  max-width: 1280px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  @include response(1200px) {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 
