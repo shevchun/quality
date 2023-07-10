@@ -1,0 +1,19 @@
+.latest {
+  position: relative;
+  padding-bottom: 80px;
+  @include response(1200px) {
+    padding-bottom: 30px;
+  }
+  &__title {
+    position: relative;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: -0.211px;
+    margin-bottom: 30px;
+    @include response(1200px) {
+      margin-bottom: 12px;
+    }
+  }
+}

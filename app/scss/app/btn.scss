@@ -1,0 +1,29 @@
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  padding: 16px;
+  background: #b51119;
+  color: #fcfcfc;
+  font-family: "Raleway";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: -0.141px;
+  border-radius: 4px;
+  transition: 0.3s ease-in-out;
+  @include response(1200px) {
+    padding: 10px 12px;
+  }
+  @include desktop-hover() {
+    background: #0a142f;
+  }
+  svg {
+    flex: 0 0 auto;
+    margin-right: 8px;
+  }
+}

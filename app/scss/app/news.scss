@@ -5,12 +5,14 @@
   margin-left: -24px;
   margin-top: -20px;
   &--row-on-mobile {
-    flex-wrap: nowrap;
-    margin-left: -20px;
-    padding-left: 39px;
-    padding-right: 20px;
-    margin-right: -20px;
-    overflow-x: auto;
+    @include response(1200px) {
+      flex-wrap: nowrap;
+      margin-left: -20px;
+      padding-left: 39px;
+      padding-right: 20px;
+      margin-right: -20px;
+      overflow-x: auto;
+    }
   }
 }
 
@@ -28,11 +30,17 @@
   margin-top: 20px;
   @include response(1200px) {
     padding: 16px;
+    flex: 0 0 calc(50% - 24px);
+    max-width: calc(50% - 24px);
     .news-list--row-on-mobile & {
       flex: 0 0 255px;
       max-width: 255px;
       width: 100%;
     }
+  }
+  @include response(767px) {
+    flex: 0 0 calc(100% - 24px);
+    max-width: calc(100% - 24px);
   }
   &--revers {
     display: flex;
@@ -91,7 +99,7 @@
     line-height: 22px;
     letter-spacing: -0.158px;
     margin-bottom: 8px;
-    max-height: 66px;
+    height: 66px;
     overflow: hidden;
     -webkit-line-clamp: 3;
     display: box;
@@ -113,7 +121,7 @@
     font-weight: 500;
     line-height: 20px;
     letter-spacing: -0.123px;
-    max-height: 60px;
+    height: 60px;
     overflow: hidden;
     -webkit-line-clamp: 3;
     display: box;
