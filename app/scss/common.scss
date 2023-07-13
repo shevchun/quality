@@ -25,6 +25,9 @@ body {
   @include response(1200px) {
     padding-top: 91px;
   }
+  &--ovv {
+    overflow: visible;
+  }
 }
 
 .container {

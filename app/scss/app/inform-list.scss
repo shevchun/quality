@@ -1,0 +1,26 @@
+.inform-list {
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.inform-item {
+  position: relative;
+  display: flex;
+  padding: 20px 60px 20px 20px;
+  border-top: 4px solid;
+  border-radius: 8px 8px 4px 4px;
+  background: #f2f2f2;
+  margin-bottom: 20px;
+  svg {
+    flex: 0 0 auto;
+    margin-right: 12px;
+  }
+  p {
+    &:last-child {
+      margin-top: 0;
+    }
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
