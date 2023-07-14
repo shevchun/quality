@@ -97,6 +97,9 @@
     line-height: 18px;
     letter-spacing: -0.123px;
     color: #696969;
+    .author__social--dropdown & {
+      color: #000;
+    }
     @include response(1200px) {
       font-size: 12px;
       line-height: 14px;

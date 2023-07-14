@@ -4,11 +4,6 @@
   font-weight: 500;
   line-height: 26px;
   letter-spacing: -0.141px;
-  @include response(1200px) {
-    font-size: 14px;
-    line-height: 22px;
-    letter-spacing: -0.123px;
-  }
   &--first-letter {
     &::first-letter {
       font-size: 79px;

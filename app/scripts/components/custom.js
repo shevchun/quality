@@ -2,7 +2,7 @@ import $ from 'jquery'
 
 export default () => {
 
-  $('.mobile-table__title').on('click', function() {
+  $('.mobile-table__title').on('click', function () {
     $(this).parents('.mobile-table').toggleClass('active')
     $(this).siblings('.blog__contents-list--mobile').slideToggle()
   })
@@ -22,7 +22,7 @@ export default () => {
 
   window.addEventListener('scroll', () => {
     navigationLinks.forEach(link => {
-      const targetSectionId = link.getAttribute('href').substring(1); // Извлекаем id раздела из href, удаляем символ '#'
+      const targetSectionId = link.getAttribute('href').substring(1);
       const targetSection = document.getElementById(targetSectionId);
 
       if (isElementVisible(targetSection)) {
@@ -41,14 +41,14 @@ export default () => {
 
   navigationLinks.forEach(link => {
     link.addEventListener('click', (event) => {
-      event.preventDefault(); 
+      event.preventDefault();
 
-      const targetSectionId = link.getAttribute('href').substring(1); 
+      const targetSectionId = link.getAttribute('href').substring(1);
       const targetSection = document.getElementById(targetSectionId);
 
       const targetOffsetTop = targetSection.getBoundingClientRect().top + window.pageYOffset;
 
-      const headerHeight = 110; 
+      const headerHeight = 110;
       const targetScrollPosition = targetOffsetTop - headerHeight;
       window.scrollTo({ top: targetScrollPosition, behavior: 'smooth' });
     });
@@ -56,7 +56,7 @@ export default () => {
 
 
 
-  $('.faq__head').on('click', function() {
+  $('.faq__head').on('click', function () {
     $(this).parents('.faq__item').toggleClass('active')
     $(this).siblings('.faq__item-body').slideToggle()
   })
@@ -87,66 +87,18 @@ export default () => {
     $('.header').removeClass('search')
   })
 
-  //   $('.lang__current').on('click', function lang(event) {
-  //     event.stopPropagation();
-  //     $(this).parents('.lang').toggleClass('active')
-  //   })
+  $('.blog__head-cell-author-link').on('click', function lang(event) {
+    if ($(window).width() < 1200) {
+      event.stopPropagation();
+      $(this).parents('.blog__head-cell-author').toggleClass('active')
+      return false
+    }
+  })
 
-  //   $(document).on("click", (event) => {
-  //     event.stopPropagation();
-  //     if ($(event.target).closest(".lang__list").length) return;
-  //     $('.lang').removeClass('active')
-  //   });
+  $(document).on("click", (event) => {
+    event.stopPropagation();
+    if ($(event.target).closest(".blog__dropdown").length) return;
+    $('.blog__head-cell-author').removeClass('active')
+  });
 
-  //   function isFloat(value) {
-  //     return typeof value === 'number' &&
-  //       !Number.isNaN(value) &&
-  //       !Number.isInteger(value);
-  //   }
-
-  //   $('[data-rate]').each((index, element) => {
-  //     let val = $(element).attr('data-rate')
-  //     if (!isFloat(val)) {
-  //       val = parseFloat(val).toFixed(1)
-  //     }
-  //     const full = val.split('.')[0] || null
-  //     const fraction = val.split('.')[1] || null
-  //     $(element).find($('.rate__item-holder-inner')).each((i, item) => {
-  //       if (i <= +full) {
-  //         $(item).addClass('active')
-  //       }
-  //       if (i === +full) {
-  //         $(item).addClass('active').css('width', `${fraction}0%`)
-  //       }
-  //     })
-  //   })
-
-  //   $(window).on('scroll', function scrollPage() {
-  //     const heightWindow = 50
-  //     if ($(this).scrollTop() >= heightWindow) {
-  //       $('.header').addClass('header--scroll')
-  //     } else {
-  //       $('.header').removeClass('header--scroll')
-  //     }
-  //   })
-
-  //   $('.table-content__list a').on('click', function clickDownScroll() {
-  //     const marginTop = 110
-  //     const scrollEl = $(this).attr('href')
-  //     if ($(scrollEl).length !== 0) {
-  //       $('html, body').animate(
-  //         {
-  //           scrollTop: $(scrollEl).offset().top - marginTop,
-  //         },
-  //         500
-  //       )
-  //     }
-  //     return false
-  //   })
-
-  //   $('.js-scroll-top').on('click', () => {
-  //     $('html, body').animate({
-  //       scrollTop: 0
-  //     }, 500);
-  //   });
 }
